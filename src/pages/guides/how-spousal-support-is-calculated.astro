@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'How Spousal Support Is Calculated | spousalsupportcalc.com';
+const description = 'A step-by-step walk-through of how spousal support is calculated: formula approaches, judicial discretion factors, and the most common adjustments.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>How Spousal Support Is Calculated</h1>
+  <p>Spousal support calculations follow one of two paths depending on the state and stage of the case. This guide walks through both.</p>
+
+  <h2>Path 1: Formula-based (temporary support, formula states)</h2>
+  <p>Many states use formulas for temporary support (during the divorce proceedings) and some for permanent support. The math typically looks like:</p>
+  <p><code>Support = (Higher earner income &times; X%) &minus; (Lower earner income &times; Y%)</code></p>
+  <p>Where X is typically 30&ndash;40% and Y is 20&ndash;30%, depending on state.</p>
+
+  <h3>Worked example (California temporary)</h3>
+  <p>Husband earns $120,000/year ($10,000/month). Wife earns $40,000/year ($3,333/month). Using the Santa Clara formula (40% of higher net minus 50% of lower net):</p>
+  <ul>
+    <li>40% of $10,000 = $4,000</li>
+    <li>50% of $3,333 = $1,667</li>
+    <li>Temporary spousal support = $4,000 - $1,667 = $2,333/month</li>
+  </ul>
+  <p>This is the temporary award. Permanent support is determined separately at trial based on Family Code &sect; 4320 factors.</p>
+
+  <h2>Path 2: Multi-factor discretion (most states for permanent support)</h2>
+  <p>For permanent support, most states use multi-factor analysis. Common factors:</p>
+  <ul>
+    <li><strong>Length of marriage.</strong> Longer = more likely permanent support; shorter = more likely rehabilitative.</li>
+    <li><strong>Standard of living during marriage.</strong> Courts try to maintain it where feasible.</li>
+    <li><strong>Earning capacity</strong> (not just current income). Did one spouse forgo career for family?</li>
+    <li><strong>Age and health.</strong> Older spouse with health issues = more likely permanent support.</li>
+    <li><strong>Contributions to marriage.</strong> Including homemaking and supporting the other's career.</li>
+    <li><strong>Tax consequences.</strong> Post-2018 federal tax treatment of alimony.</li>
+    <li><strong>Custody and child support.</strong> Effective offset of household resources.</li>
+  </ul>
+
+  <h2>Duration calculation</h2>
+  <p>Most states tie duration to marriage length. Rules of thumb:</p>
+  <ul>
+    <li><strong>Marriages under 5 years:</strong> 0&ndash;50% of marriage length, often rehabilitative</li>
+    <li><strong>5&ndash;10 years:</strong> ~50% of marriage length</li>
+    <li><strong>10&ndash;20 years:</strong> 60&ndash;80% of marriage length</li>
+    <li><strong>20+ years:</strong> Often indefinite (subject to retirement, remarriage, material change)</li>
+  </ul>
+  <p>Texas caps at 5 years for most cases. Some states are more generous to long-marriage spouses.</p>
+
+  <h2>Adjustments that change the outcome</h2>
+  <ul>
+    <li><strong>Imputation of income.</strong> If a spouse is voluntarily unemployed or underemployed, courts can assign an imputed earning capacity.</li>
+    <li><strong>Earning capacity vs. current income.</strong> A doctor who became a stay-at-home parent has high earning capacity even with $0 current income.</li>
+    <li><strong>Child support interaction.</strong> Some formula states calculate both together to avoid duplicate counting.</li>
+    <li><strong>Property division.</strong> Heavily favoring one spouse in property may reduce ongoing support.</li>
+  </ul>
+</BaseLayout>

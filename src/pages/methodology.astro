@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Methodology | spousalsupportcalc.com';
+const description = 'How we calculate spousal support: state-specific formulas, duration guidelines, and the discretion factors that override formulas.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>Methodology</h1>
+  <p>Our calculator applies the most common formula-based approach used in temporary-support guidelines, then surfaces state-specific variations.</p>
+
+  <h2>Default formula (general estimate)</h2>
+  <p><code>Spousal support = (Higher earner income &times; 0.30) &minus; (Lower earner income &times; 0.20)</code></p>
+  <p>This is similar to the Santa Clara County (California) formula used for temporary support and informally referenced in many other jurisdictions.</p>
+
+  <h2>State-specific formulas (used when state is selected)</h2>
+  <ul>
+    <li><strong>California:</strong> Temporary support typically uses the Santa Clara formula or similar local guidelines (40% of higher earner's net minus 50% of lower earner's net is one common variant). Permanent support is judicial discretion under Fam. Code &sect; 4320 factors.</li>
+    <li><strong>Massachusetts:</strong> Statutory formula at 30&ndash;35% of the income gap. Duration tied to marriage length (50&ndash;80%).</li>
+    <li><strong>Pennsylvania:</strong> Formula similar to child support: 33% of higher net minus 40% of lower net (when no children), adjusted for children.</li>
+    <li><strong>Texas:</strong> Capped at lesser of $5,000/month or 20% of supporting spouse's income; duration capped at 5 years for most marriages.</li>
+    <li><strong>Illinois:</strong> 33.3% of payer's net income minus 25% of recipient's net income; duration based on marriage length percentage.</li>
+  </ul>
+
+  <h2>Duration guidelines</h2>
+  <p>Most state guidelines tie duration to marriage length, often using a percentage:</p>
+  <ul>
+    <li>Marriages under 5 years: 0&ndash;50% of marriage length</li>
+    <li>5&ndash;10 years: ~50% of marriage length</li>
+    <li>10&ndash;20 years: 60&ndash;80% of marriage length</li>
+    <li>20+ years: often indefinite, subject to retirement, remarriage, or material change</li>
+  </ul>
+
+  <h2>Factors that adjust the formula</h2>
+  <p>Even in formula states, judges adjust amounts up or down based on:</p>
+  <ul>
+    <li>Age and health of both parties</li>
+    <li>Standard of living during the marriage</li>
+    <li>Earning capacity (not just current income)</li>
+    <li>Non-monetary contributions (homemaking, supporting career)</li>
+    <li>Custody arrangements and child support</li>
+    <li>Misconduct (in some states; many have eliminated this factor)</li>
+  </ul>
+
+  <h2>What we don't model</h2>
+  <p>Tax treatment changes (the 2017 Tax Cuts and Jobs Act changed federal tax treatment for divorces finalized after 12/31/2018); child-support interactions; property-division offsets; pre/postnup overrides. These require case-specific analysis.</p>
+</BaseLayout>

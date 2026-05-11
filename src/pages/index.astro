@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Spousal Support / Alimony Calculator | spousalsupportcalc.com';
+const description = 'Free spousal support calculator. Estimate alimony amounts based on income, marriage duration, and state-specific guidelines. Plain-English explanations of how state courts calculate support.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>Spousal Support Calculator</h1>
+  <p>Estimate spousal support (alimony) based on income, marriage duration, and state-specific guidelines. US spousal support law varies significantly by state &mdash; some states have formulaic guidelines, others leave it largely to judicial discretion. Use this calculator as a starting estimate, then check your state's specific rules.</p>
+
+  <section aria-labelledby="calc-heading">
+    <h2 id="calc-heading">Calculate spousal support</h2>
+    <noscript>
+      <p><strong>Note:</strong> the interactive calculator requires JavaScript. Most state guidelines start with a formula like <code>Support = (Higher income &times; 0.30) &minus; (Lower income &times; 0.20)</code>, adjusted for marriage duration and special circumstances.</p>
+    </noscript>
+    <div id="calculator-island">
+      <form class="calc-form" data-pilot-placeholder>
+        <label>Higher earner's annual gross income (USD) <input type="number" min="0" step="100" placeholder="120000" /></label>
+        <label>Lower earner's annual gross income (USD) <input type="number" min="0" step="100" placeholder="40000" /></label>
+        <label>Years married <input type="number" min="0" step="0.5" placeholder="15" /></label>
+        <label>State <input type="text" placeholder="California" /></label>
+        <button type="button">Estimate (interactive version loads with JS)</button>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <h2>How spousal support is calculated</h2>
+    <p>Most states use one of two approaches:</p>
+    <ul>
+      <li><strong>Formulaic guidelines.</strong> States like California (for temporary support), Massachusetts, Pennsylvania, and Texas use specific formulas. A common approach: 30&ndash;40% of the higher earner's income minus 20&ndash;30% of the lower earner's income.</li>
+      <li><strong>Multi-factor analysis.</strong> Most other states leave the amount and duration to judicial discretion based on statutory factors: length of marriage, standard of living, age and health, earning capacity, and contributions to the marriage.</li>
+    </ul>
+    <p>Even in formula states, judges have wide discretion to adjust based on individual circumstances. See our <a href="/methodology">methodology</a> for state-specific formulas.</p>
+  </section>
+
+  <section>
+    <h2>Types of spousal support</h2>
+    <ul>
+      <li><strong>Temporary (pendente lite):</strong> Awarded during the divorce proceedings to maintain status quo.</li>
+      <li><strong>Rehabilitative:</strong> Time-limited support to help the lower-earning spouse retrain or re-enter the workforce.</li>
+      <li><strong>Permanent / long-term:</strong> Indefinite support, typically for long marriages or where one spouse can't reasonably become self-supporting.</li>
+      <li><strong>Reimbursement:</strong> Compensation for one spouse's contributions to the other's education or career (e.g., supporting them through professional school).</li>
+      <li><strong>Lump-sum:</strong> One-time payment instead of ongoing support.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>State variation matters enormously</h2>
+    <p>Spousal support amounts and duration vary 10x or more across states for the same fact pattern. Key categories:</p>
+    <ul>
+      <li><strong>States with formula-based temporary support:</strong> California, Massachusetts, Pennsylvania, Texas, Illinois, New York.</li>
+      <li><strong>Discretion-heavy states:</strong> Most others. Same income/marriage facts can yield very different outcomes depending on the judge.</li>
+      <li><strong>Cap states:</strong> Texas has a 5-year cap for most cases. Other states have soft caps tied to marriage length.</li>
+      <li><strong>No-alimony jurisdictions:</strong> No US state bans spousal support entirely, but a few make it very hard to obtain.</li>
+    </ul>
+    <p>See <a href="/guides/state-spousal-support-guidelines">State spousal support guidelines</a> for the details.</p>
+  </section>
+
+  <section>
+    <h2>Recent guides</h2>
+    <ul>
+      <li><a href="/guides/how-spousal-support-is-calculated">How spousal support is calculated</a></li>
+      <li><a href="/guides/state-spousal-support-guidelines">State spousal support guidelines</a></li>
+      <li><a href="/guides/what-to-do-in-spousal-support-dispute">What to do in a spousal support dispute</a></li>
+      <li><a href="/guides/common-spousal-support-misconceptions">Common spousal support misconceptions</a></li>
+    </ul>
+  </section>
+
+  <style>
+    .calc-form { display:grid;gap:0.75rem;max-width:480px;margin:1rem 0; }
+    .calc-form label { display:grid;gap:0.25rem;font-size:0.95rem; }
+    .calc-form input { padding:0.5rem;font-size:1rem;border:1px solid var(--color-border);border-radius:4px; }
+    .calc-form button { padding:0.6rem 1rem;background:var(--color-accent);color:white;border:none;border-radius:4px;cursor:pointer;font-size:1rem; }
+  </style>
+</BaseLayout>

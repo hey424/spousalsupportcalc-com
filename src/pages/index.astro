@@ -5,7 +5,8 @@ const description = 'Free spousal support calculator. Estimate alimony amounts b
 ---
 <BaseLayout title={title} description={description}>
   <h1>Spousal Support Calculator</h1>
-  <p>Estimate spousal support (alimony) based on income, marriage duration, and state-specific guidelines. US spousal support law varies significantly by state &mdash; some states have formulaic guidelines, others leave it largely to judicial discretion. Use this calculator as a starting estimate, then check your state's specific rules.</p>
+  <p><em>Reviewed by Harper Quinn (HQ), Editor-in-Chief &amp; Family Law Lead. Updated May 2026.</em></p>
+  <p>Estimate spousal support (alimony) based on income, marriage duration, and state-specific guidelines. US spousal support law varies significantly by state &mdash; some states apply statutory formulas for temporary support, others leave amount and duration almost entirely to judicial discretion based on multi-factor analysis. This calculator applies the most widely referenced formula approach as a starting estimate; see the state-specific section below and our <a href="/guides/state-spousal-support-guidelines">state guidelines guide</a> for how your state specifically approaches the calculation.</p>
 
   <section aria-labelledby="calc-heading">
     <h2 id="calc-heading">Calculate spousal support</h2>
@@ -25,35 +26,36 @@ const description = 'Free spousal support calculator. Estimate alimony amounts b
 
   <section>
     <h2>How spousal support is calculated</h2>
-    <p>Most states use one of two approaches:</p>
+    <p>State courts approach spousal support through one of two frameworks, and most states use a combination of both depending on whether the support is temporary (while the divorce proceeds) or permanent (awarded at the final judgment).</p>
     <ul>
-      <li><strong>Formulaic guidelines.</strong> States like California (for temporary support), Massachusetts, Pennsylvania, and Texas use specific formulas. A common approach: 30&ndash;40% of the higher earner's income minus 20&ndash;30% of the lower earner's income.</li>
-      <li><strong>Multi-factor analysis.</strong> Most other states leave the amount and duration to judicial discretion based on statutory factors: length of marriage, standard of living, age and health, earning capacity, and contributions to the marriage.</li>
+      <li><strong>Formulaic guidelines.</strong> States like California (for temporary support), Massachusetts, Pennsylvania, Texas, Illinois, and New York use specific formulas. A common structure: 30&ndash;40% of the higher earner&rsquo;s income minus 20&ndash;30% of the lower earner&rsquo;s income. Formula approaches provide predictability during the pendente lite period and serve as starting points for settlement negotiations.</li>
+      <li><strong>Multi-factor discretionary analysis.</strong> Most states leave permanent support amount and duration to judicial discretion based on statutory factors: length of marriage, standard of living established during the marriage, age and health of both spouses, relative earning capacity, each spouse&rsquo;s non-monetary contributions, and custody and child support arrangements. Even in formula states, permanent support is typically determined through discretionary analysis rather than a mechanical formula.</li>
     </ul>
-    <p>Even in formula states, judges have wide discretion to adjust based on individual circumstances. See our <a href="/methodology">methodology</a> for state-specific formulas.</p>
+    <p>Even in formula states, judges have wide discretion to adjust final awards based on individual circumstances — particularly in long marriages, cases involving significant health issues, or situations where one spouse made substantial career sacrifices. The formula is a starting point, not a binding outcome. See our <a href="/methodology">methodology</a> for state-specific formulas and the factors that adjust them.</p>
   </section>
 
   <section>
     <h2>Types of spousal support</h2>
+    <p>Courts may award different types of spousal support depending on the stage of the divorce, the length of the marriage, and each spouse&rsquo;s financial situation. Understanding which type applies to your case affects both the calculation and the duration.</p>
     <ul>
-      <li><strong>Temporary (pendente lite):</strong> Awarded during the divorce proceedings to maintain status quo.</li>
-      <li><strong>Rehabilitative:</strong> Time-limited support to help the lower-earning spouse retrain or re-enter the workforce.</li>
-      <li><strong>Permanent / long-term:</strong> Indefinite support, typically for long marriages or where one spouse can't reasonably become self-supporting.</li>
-      <li><strong>Reimbursement:</strong> Compensation for one spouse's contributions to the other's education or career (e.g., supporting them through professional school).</li>
-      <li><strong>Lump-sum:</strong> One-time payment instead of ongoing support.</li>
+      <li><strong>Temporary (pendente lite):</strong> Awarded during the divorce proceedings to maintain both parties&rsquo; financial status quo while the case is pending. Formula states typically apply their formula calculations to this stage. Temporary support ends when the divorce is finalized, at which point permanent support may be ordered.</li>
+      <li><strong>Rehabilitative:</strong> Time-limited support designed to help the lower-earning spouse retrain, obtain education, or re-enter the workforce. Most common in shorter marriages or where one spouse has marketable skills. Duration is tied to a realistic timeline for achieving economic self-sufficiency.</li>
+      <li><strong>Permanent / long-term:</strong> Indefinite support, typically awarded in long marriages (often 20+ years) or where one spouse cannot reasonably become economically self-sufficient due to age, health, or extended time out of the workforce. In most states, &ldquo;permanent&rdquo; support is subject to modification on material change in circumstances and terminates on remarriage of the recipient.</li>
+      <li><strong>Reimbursement:</strong> Compensation for one spouse&rsquo;s financial contributions to the other&rsquo;s education or career development during the marriage — most commonly, supporting a spouse through professional or graduate school. Not universally available; varies significantly by state.</li>
+      <li><strong>Lump-sum:</strong> A single payment or series of payments settling the spousal support obligation permanently, rather than ongoing monthly payments. Can provide certainty to both parties and eliminates future modification disputes.</li>
     </ul>
   </section>
 
   <section>
     <h2>State variation matters enormously</h2>
-    <p>Spousal support amounts and duration vary 10x or more across states for the same fact pattern. Key categories:</p>
+    <p>Spousal support amounts and duration vary dramatically across states for identical fact patterns. A 15-year marriage with an $80,000 income gap can produce very different outcomes depending on where the divorce is filed. Key categories:</p>
     <ul>
-      <li><strong>States with formula-based temporary support:</strong> California, Massachusetts, Pennsylvania, Texas, Illinois, New York.</li>
-      <li><strong>Discretion-heavy states:</strong> Most others. Same income/marriage facts can yield very different outcomes depending on the judge.</li>
-      <li><strong>Cap states:</strong> Texas has a 5-year cap for most cases. Other states have soft caps tied to marriage length.</li>
-      <li><strong>No-alimony jurisdictions:</strong> No US state bans spousal support entirely, but a few make it very hard to obtain.</li>
+      <li><strong>States with formula-based temporary support:</strong> California, Massachusetts, Pennsylvania, Texas, Illinois, New York. These states provide the most predictability for temporary support calculations during proceedings.</li>
+      <li><strong>Discretion-heavy states:</strong> Most other states. The same income and marriage length can yield different outcomes depending on the judge, county, and specific facts developed in litigation.</li>
+      <li><strong>Cap states:</strong> Texas limits support to the lesser of $5,000/month or 20% of the payer&rsquo;s gross income, and caps duration at 5 years for most marriages. Other states have soft duration caps tied to marriage length percentages.</li>
+      <li><strong>Florida&rsquo;s 2023 reform:</strong> Florida abolished permanent alimony effective July 2023, replacing it with bridge-the-gap, rehabilitative, and durational support options tied to marriage length. This was a significant change for long-marriage spouses in Florida who previously had access to permanent alimony.</li>
     </ul>
-    <p>See <a href="/guides/state-spousal-support-guidelines">State spousal support guidelines</a> for the details.</p>
+    <p>See <a href="/guides/state-spousal-support-guidelines">state spousal support guidelines</a> for the details on your state&rsquo;s specific approach.</p>
   </section>
 
   <section>

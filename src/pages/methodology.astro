@@ -1,45 +1,52 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const title = 'Methodology | spousalsupportcalc.com';
-const description = 'How we calculate spousal support: state-specific formulas, duration guidelines, and the discretion factors that override formulas.';
+const description = 'How we calculate spousal support estimates: state-specific formulas, duration guidelines, discretion factors, and what the calculator does not model.';
 ---
 <BaseLayout title={title} description={description}>
   <h1>Methodology</h1>
-  <p>Our calculator applies the most common formula-based approach used in temporary-support guidelines, then surfaces state-specific variations.</p>
+  <p><em>Reviewed by Harper Quinn (HQ), Editor-in-Chief &amp; Family Law Lead. Updated May 2026.</em></p>
+  <p>This page documents the formulas, data sources, and assumptions behind the spousal support calculator. Every formula shown here reflects approaches reported in state statutes, court rules, or widely reported local practice guidelines. The calculator produces a starting estimate — spousal support is ultimately determined by judicial discretion in most states, and formula outputs are routinely adjusted based on facts that no calculator can capture.</p>
 
-  <h2>Default formula (general estimate)</h2>
+  <h2>Step 1: Default formula (general estimate)</h2>
+  <p>When no state is specified, the calculator applies the most commonly referenced general formula for temporary spousal support:</p>
   <p><code>Spousal support = (Higher earner income &times; 0.30) &minus; (Lower earner income &times; 0.20)</code></p>
-  <p>This is similar to the Santa Clara County (California) formula used for temporary support and informally referenced in many other jurisdictions.</p>
+  <p>This formula is modeled on the Santa Clara County (California) local rule for temporary support and is informally referenced in many other jurisdictions as a neutral starting point. It does not reflect any binding national standard — there is no federal spousal support law. The 30%/20% version is a conservative central estimate; actual formula percentages vary across states and courts.</p>
+  <p>The formula produces a monthly estimate. Inputs in the calculator are annual; the result is divided by 12 to produce the monthly amount shown.</p>
 
-  <h2>State-specific formulas (used when state is selected)</h2>
+  <h2>Step 2: State-specific formulas (when state is entered)</h2>
+  <p>When a state is entered, the calculator applies the most current reported formula for that jurisdiction, where one exists. Key formula states and their approaches:</p>
   <ul>
-    <li><strong>California:</strong> Temporary support typically uses the Santa Clara formula or similar local guidelines (40% of higher earner's net minus 50% of lower earner's net is one common variant). Permanent support is judicial discretion under Fam. Code &sect; 4320 factors.</li>
-    <li><strong>Massachusetts:</strong> Statutory formula at 30&ndash;35% of the income gap. Duration tied to marriage length (50&ndash;80%).</li>
-    <li><strong>Pennsylvania:</strong> Formula similar to child support: 33% of higher net minus 40% of lower net (when no children), adjusted for children.</li>
-    <li><strong>Texas:</strong> Capped at lesser of $5,000/month or 20% of supporting spouse's income; duration capped at 5 years for most marriages.</li>
-    <li><strong>Illinois:</strong> 33.3% of payer's net income minus 25% of recipient's net income; duration based on marriage length percentage.</li>
+    <li><strong>California:</strong> Temporary support typically applies the Santa Clara County formula or similar local court guidelines. The most widely referenced variant is 40% of the higher earner&rsquo;s net income minus 50% of the lower earner&rsquo;s net income (using net rather than gross). Permanent support in California is judicial discretion under Family Code &sect; 4320 factors — the formula does not govern the final permanent award. Long marriages (10+ years) create a rebuttable presumption of extended support.</li>
+    <li><strong>Massachusetts:</strong> The Alimony Reform Act of 2011 provides a statutory formula: 30&ndash;35% of the income difference between the parties. Duration is tied to marriage length: marriages under 5 years yield support up to 50% of marriage length; 5&ndash;10 years, up to 60%; 10&ndash;15 years, up to 70%; 15&ndash;20 years, up to 80%. Support for 20+ year marriages may continue indefinitely until the payor reaches full retirement age.</li>
+    <li><strong>Pennsylvania:</strong> Spousal support and alimony pendente lite are calculated using guidelines modeled on the child support formula: 33% of the difference in net monthly incomes when no dependent children are involved; adjusted downward when child support is also ordered to prevent double-counting household resources.</li>
+    <li><strong>Texas:</strong> Statutory maintenance is capped at the lesser of $5,000/month or 20% of the supporting spouse&rsquo;s average monthly gross income. Duration is capped at 5 years for most marriages; 7 years for marriages of 10&ndash;20 years; 10 years for marriages of 20+ years; indefinitely for disability-based support. Eligibility requires at least 10 years of marriage (with narrow exceptions for family violence or disability).</li>
+    <li><strong>Illinois:</strong> Formula: 33.3% of the payer&rsquo;s net annual income minus 25% of the recipient&rsquo;s net annual income (combined support cannot exceed 40% of combined net income). Duration is calculated as a percentage of marriage length: 20% for a 3-year marriage, scaling to 80% for a 15-year marriage, with marriages of 20+ years potentially producing indefinite support.</li>
+    <li><strong>New York:</strong> Temporary maintenance applies the Maintenance Guidelines Act formula: 30% of the payer&rsquo;s income minus 20% of the payee&rsquo;s income (when payee does not have the children), subject to income caps of approximately $203,000. Post-divorce maintenance follows similar formulas but is adjusted for the specific facts at the final judgment stage.</li>
   </ul>
 
-  <h2>Duration guidelines</h2>
-  <p>Most state guidelines tie duration to marriage length, often using a percentage:</p>
+  <h2>Step 3: Duration guidelines</h2>
+  <p>Duration is estimated based on the most common state benchmarks, which typically tie support duration to a percentage of the marriage length. The general framework:</p>
   <ul>
-    <li>Marriages under 5 years: 0&ndash;50% of marriage length</li>
-    <li>5&ndash;10 years: ~50% of marriage length</li>
-    <li>10&ndash;20 years: 60&ndash;80% of marriage length</li>
-    <li>20+ years: often indefinite, subject to retirement, remarriage, or material change</li>
+    <li><strong>Marriages under 5 years:</strong> 0&ndash;50% of marriage length, typically rehabilitative support aimed at short-term economic transition.</li>
+    <li><strong>5&ndash;10 years:</strong> Approximately 50% of marriage length in most states. Support may be rehabilitative with a defined end date.</li>
+    <li><strong>10&ndash;20 years:</strong> 60&ndash;80% of marriage length in most states. Courts have more discretion to order longer durations when circumstances warrant.</li>
+    <li><strong>20+ years:</strong> Many states allow or presume indefinite support for very long marriages, subject to modification on retirement, remarriage, or material change in circumstances. Texas caps duration even for long marriages (10 years max).</li>
   </ul>
 
-  <h2>Factors that adjust the formula</h2>
-  <p>Even in formula states, judges adjust amounts up or down based on:</p>
+  <h2>Step 4: Adjustment factors</h2>
+  <p>Even in formula states, judges adjust formula outputs based on the statutory factors applicable in their jurisdiction. The most significant adjustment factors:</p>
   <ul>
-    <li>Age and health of both parties</li>
-    <li>Standard of living during the marriage</li>
-    <li>Earning capacity (not just current income)</li>
-    <li>Non-monetary contributions (homemaking, supporting career)</li>
-    <li>Custody arrangements and child support</li>
-    <li>Misconduct (in some states; many have eliminated this factor)</li>
+    <li><strong>Age and health of both parties:</strong> Significant health issues limiting one spouse&rsquo;s earning capacity are among the strongest arguments for above-formula or extended support. A spouse who cannot become self-supporting due to health may receive indefinite support regardless of marriage length.</li>
+    <li><strong>Standard of living during marriage:</strong> Courts in most states attempt to maintain the marital standard of living for both spouses to the extent feasible. High-asset marriages with established expensive lifestyles may produce above-formula awards for both parties.</li>
+    <li><strong>Earning capacity vs. current income:</strong> The relevant income is not necessarily current income but earning capacity — what each spouse is capable of earning with reasonable effort. A spouse who reduced work to care for children has an earning capacity above their current income; a spouse who voluntarily reduced income to minimize support may have income imputed at their capacity.</li>
+    <li><strong>Non-monetary contributions:</strong> Career sacrifices made to support the other spouse&rsquo;s career advancement, primary responsibility for childcare, or extended homemaking during the marriage are significant factors in most states. A spouse who left a career to raise children for 15 years is not simply unemployed — they have a claim for recognition of their contribution to the household.</li>
+    <li><strong>Custody and child support:</strong> States generally calculate child support before or simultaneously with spousal support to prevent double-counting. Spousal support may be adjusted downward when child support is also ordered, since the payer&rsquo;s net disposable income is already reduced by the child support obligation.</li>
   </ul>
 
-  <h2>What we don't model</h2>
-  <p>Tax treatment changes (the 2017 Tax Cuts and Jobs Act changed federal tax treatment for divorces finalized after 12/31/2018); child-support interactions; property-division offsets; pre/postnup overrides. These require case-specific analysis.</p>
+  <h2>What the calculator does not model</h2>
+  <p>The 2017 Tax Cuts and Jobs Act changed the federal tax treatment of spousal support for divorces finalized after December 31, 2018: support is no longer deductible to the payer and no longer taxable income to the recipient. Pre-2019 divorce agreements with the old tax treatment preserved that treatment only if they were not subsequently modified to change the support amount. The calculator does not model after-tax effective amounts, which depend on each spouse&rsquo;s marginal tax rates and can significantly affect the real economic value of the support obligation.</p>
+  <p>The calculator also does not model: property division offsets (where a favorable property division trades off against lower ongoing support); prenuptial or postnuptial agreement terms that override the formula; child-support interactions at the individual case level; or jurisdiction-specific local rules that may differ from the reported formula.</p>
+
+  <p>Return to the <a href="/">calculator</a>, or read the <a href="/faq">FAQ</a>.</p>
 </BaseLayout>

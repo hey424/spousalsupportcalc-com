@@ -1,53 +1,60 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const title = 'How Spousal Support Is Calculated | spousalsupportcalc.com';
-const description = 'A step-by-step walk-through of how spousal support is calculated: formula approaches, judicial discretion factors, and the most common adjustments.';
+const description = 'A step-by-step walk-through of how spousal support is calculated: formula approaches, judicial discretion factors, duration rules, and the most common adjustments.';
 ---
 <BaseLayout title={title} description={description}>
   <h1>How Spousal Support Is Calculated</h1>
-  <p>Spousal support calculations follow one of two paths depending on the state and stage of the case. This guide walks through both.</p>
+  <p><em>Reviewed by Harper Quinn (HQ), Editor-in-Chief &amp; Family Law Lead. Updated May 2026.</em></p>
+
+  <p>Spousal support calculations follow one of two paths depending on the state and whether the support is temporary (during divorce proceedings) or permanent (ordered at the final judgment). In most cases, formula approaches govern temporary support during the pendente lite period, while permanent support involves more discretionary multi-factor analysis. Understanding both paths &mdash; and how they interact &mdash; is the foundation for evaluating any spousal support situation.</p>
 
   <h2>Path 1: Formula-based (temporary support, formula states)</h2>
-  <p>Many states use formulas for temporary support (during the divorce proceedings) and some for permanent support. The math typically looks like:</p>
+  <p>Many states use statutory or local court formulas for temporary support and some for permanent support. The mathematical structure typically looks like:</p>
   <p><code>Support = (Higher earner income &times; X%) &minus; (Lower earner income &times; Y%)</code></p>
-  <p>Where X is typically 30&ndash;40% and Y is 20&ndash;30%, depending on state.</p>
+  <p>Where X is typically 30&ndash;40% and Y is 20&ndash;30%, depending on the state and whether the formula uses gross or net income. Formula approaches provide predictability and consistency — parties can calculate a starting figure before litigation and use it as the basis for early settlement discussions.</p>
 
-  <h3>Worked example (California temporary)</h3>
-  <p>Husband earns $120,000/year ($10,000/month). Wife earns $40,000/year ($3,333/month). Using the Santa Clara formula (40% of higher net minus 50% of lower net):</p>
+  <h3>Worked example (California temporary support)</h3>
+  <p>Husband earns $120,000/year ($10,000/month). Wife earns $40,000/year ($3,333/month). Using the Santa Clara County formula (40% of higher net minus 50% of lower net, with net approximated at 75% of gross for this example):</p>
   <ul>
-    <li>40% of $10,000 = $4,000</li>
-    <li>50% of $3,333 = $1,667</li>
-    <li>Temporary spousal support = $4,000 - $1,667 = $2,333/month</li>
+    <li>40% of $7,500 (net) = $3,000</li>
+    <li>50% of $2,500 (net) = $1,250</li>
+    <li>Temporary spousal support = $3,000 &minus; $1,250 = $1,750/month</li>
   </ul>
-  <p>This is the temporary award. Permanent support is determined separately at trial based on Family Code &sect; 4320 factors.</p>
+  <p>This is the temporary award during proceedings. Permanent support is determined separately at trial or settlement based on California Family Code &sect; 4320 factors, which include the standard of living during the marriage, each spouse&rsquo;s earning capacity, the supported spouse&rsquo;s marketable skills, the duration of the marriage, and many other considerations.</p>
+
+  <h3>Massachusetts example (statutory formula)</h3>
+  <p>Spouse A earns $90,000/year; Spouse B earns $30,000/year. Income gap = $60,000. Massachusetts formula: 30&ndash;35% of the income difference. At 30%: $60,000 &times; 0.30 / 12 = $1,500/month. For a 12-year marriage, duration would be approximately 70% of 12 years = 8.4 years. Massachusetts also caps total support at the recipient&rsquo;s &ldquo;need&rdquo; defined by the standard of living during the marriage.</p>
 
   <h2>Path 2: Multi-factor discretion (most states for permanent support)</h2>
-  <p>For permanent support, most states use multi-factor analysis. Common factors:</p>
+  <p>For permanent support, most states use multi-factor analysis. The specific factors are defined in each state&rsquo;s family law statute, but the most widely applied factors across jurisdictions include:</p>
   <ul>
-    <li><strong>Length of marriage.</strong> Longer = more likely permanent support; shorter = more likely rehabilitative.</li>
-    <li><strong>Standard of living during marriage.</strong> Courts try to maintain it where feasible.</li>
-    <li><strong>Earning capacity</strong> (not just current income). Did one spouse forgo career for family?</li>
-    <li><strong>Age and health.</strong> Older spouse with health issues = more likely permanent support.</li>
-    <li><strong>Contributions to marriage.</strong> Including homemaking and supporting the other's career.</li>
-    <li><strong>Tax consequences.</strong> Post-2018 federal tax treatment of alimony.</li>
-    <li><strong>Custody and child support.</strong> Effective offset of household resources.</li>
+    <li><strong>Length of marriage.</strong> The single most important factor in most states. Longer marriages are more likely to produce permanent or long-duration support; shorter marriages typically yield rehabilitative support with a defined end date.</li>
+    <li><strong>Standard of living during marriage.</strong> Courts attempt to maintain both spouses&rsquo; living standards to the extent feasible given combined income. A high-standard-of-living marriage can support above-formula awards; a modest standard of living constrains recovery even when income gaps are large.</li>
+    <li><strong>Earning capacity (not just current income).</strong> Did one spouse forgo career development to raise children or support the other&rsquo;s career? Earning capacity — what a spouse is capable of earning with reasonable effort — is often more relevant than current income. A former attorney who stepped out of practice for 15 years to raise children does not simply have $0 earning capacity, but their reentry earning capacity is likely much lower than when they left the profession.</li>
+    <li><strong>Age and health.</strong> Older spouses with health limitations have reduced earning capacity and fewer years to rebuild retirement savings — factors that support extended or permanent awards. A 60-year-old spouse with a chronic health condition after a 30-year marriage is the paradigmatic case for indefinite support.</li>
+    <li><strong>Contributions to marriage.</strong> Non-monetary contributions — homemaking, primary childcare, supporting the other&rsquo;s education or career advancement — are recognized in most state statutes as legitimate factors supporting support awards. These contributions have real economic value that is recognized by courts in the support analysis.</li>
+    <li><strong>Tax consequences.</strong> Post-2017 Tax Cuts and Jobs Act, federal tax treatment is neutral (no deduction for payer, no income for recipient for post-2018 divorces). Some attorneys still negotiate adjustments to reflect state tax treatment or to address the effective after-tax value of support payments.</li>
+    <li><strong>Custody and child support.</strong> Effective offset of household resources through child support is considered. Some state formulas calculate both support obligations simultaneously to avoid double-counting.</li>
   </ul>
 
   <h2>Duration calculation</h2>
-  <p>Most states tie duration to marriage length. Rules of thumb:</p>
+  <p>Most states tie support duration to marriage length, using benchmarks that vary by state:</p>
   <ul>
-    <li><strong>Marriages under 5 years:</strong> 0&ndash;50% of marriage length, often rehabilitative</li>
-    <li><strong>5&ndash;10 years:</strong> ~50% of marriage length</li>
-    <li><strong>10&ndash;20 years:</strong> 60&ndash;80% of marriage length</li>
-    <li><strong>20+ years:</strong> Often indefinite (subject to retirement, remarriage, material change)</li>
+    <li><strong>Marriages under 5 years:</strong> 0&ndash;50% of marriage length, often rehabilitative. Many courts award no permanent support for very short marriages absent exceptional circumstances.</li>
+    <li><strong>5&ndash;10 years:</strong> Approximately 50% of marriage length in most states. Support is typically designed to help the lower-earning spouse transition to economic self-sufficiency.</li>
+    <li><strong>10&ndash;20 years:</strong> 60&ndash;80% of marriage length in most states. Courts have more discretion to extend duration when circumstances warrant — health issues, age, or significant career sacrifices can push duration above the guideline range.</li>
+    <li><strong>20+ years:</strong> Often indefinite (subject to modification on retirement, remarriage, or material change) in most states. Texas caps at 10 years even for 20+ year marriages; Florida eliminated permanent alimony in 2023.</li>
   </ul>
-  <p>Texas caps at 5 years for most cases. Some states are more generous to long-marriage spouses.</p>
+  <p>Duration guidelines are starting points, not mandatory rules. Courts can deviate with documented reasoning in either direction.</p>
 
   <h2>Adjustments that change the outcome</h2>
   <ul>
-    <li><strong>Imputation of income.</strong> If a spouse is voluntarily unemployed or underemployed, courts can assign an imputed earning capacity.</li>
-    <li><strong>Earning capacity vs. current income.</strong> A doctor who became a stay-at-home parent has high earning capacity even with $0 current income.</li>
-    <li><strong>Child support interaction.</strong> Some formula states calculate both together to avoid duplicate counting.</li>
-    <li><strong>Property division.</strong> Heavily favoring one spouse in property may reduce ongoing support.</li>
+    <li><strong>Imputation of income.</strong> When a spouse is voluntarily unemployed or underemployed to reduce their support obligation, courts impute income at earning capacity. The imputation must be based on evidence — typical approach is to assign income at the wage a qualified person with the spouse&rsquo;s background could realistically earn in the local job market.</li>
+    <li><strong>Property division offset.</strong> A favorable property division in favor of the lower-earning spouse may reduce ongoing support obligations. Where one spouse receives substantially more in property, courts may reduce duration or amount of ongoing support to reflect the property settlement.</li>
+    <li><strong>Child support interaction.</strong> States calculate child support and spousal support in coordination to prevent the combined obligations from exceeding a reasonable share of the payer&rsquo;s income. Some formula states set a combined cap (e.g., combined child and spousal support cannot exceed 50% of the payer&rsquo;s income).</li>
+    <li><strong>Vocational expert evidence.</strong> In contested cases with significant earning capacity disputes, courts may appoint or receive testimony from vocational rehabilitation experts who assess the realistic job market for a spouse who has been out of the workforce. This evidence can significantly affect imputation analysis and is commonly used in high-asset cases involving long-term homemakers.</li>
   </ul>
+
+  <p>Return to the <a href="/">calculator</a>, see <a href="/guides/state-spousal-support-guidelines">state-specific guidelines</a>, or read <a href="/guides/what-to-do-in-spousal-support-dispute">what to do in a spousal support dispute</a>.</p>
 </BaseLayout>

@@ -1,15 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const title = 'Methodology | spousalsupportcalc.com';
-const description = 'How we calculate spousal support: state-specific formulas, duration guidelines, and the discretion factors that override formulas.';
+const description = 'How we calculate spousal support: the default formula with a worked example, state-specific guidelines, duration rules, and the discretion factors that override formulas.';
 ---
 <BaseLayout title={title} description={description}>
   <h1>Methodology</h1>
-  <p>Our calculator applies the most common formula-based approach used in temporary-support guidelines, then surfaces state-specific variations.</p>
+  <p><em>Reviewed by Harper Quinn (HQ), Editor-in-Chief, and Reese Donovan (RD), Contributing Writer &middot; Updated June 2026</em></p>
+  <p>SpousalSupportCalc estimates the amount and likely duration of spousal support (alimony) in a divorce. There is no single national formula &mdash; spousal support is one of the most discretionary areas of family law, and the same couple could receive very different awards in different states or even before different judges. Our calculator applies the most common formula-based approach used in temporary-support guidelines to produce a baseline figure, then surfaces the state-specific variations and the discretion factors that routinely move the real number up or down. Methodology matters here because a formula output is only a starting point: it is most accurate for <em>temporary</em> (pendente lite) support while a case is pending, and least reliable for long-term or "permanent" support, which most states leave largely to judicial judgment.</p>
 
   <h2>Default formula (general estimate)</h2>
   <p><code>Spousal support = (Higher earner income &times; 0.30) &minus; (Lower earner income &times; 0.20)</code></p>
-  <p>This is similar to the Santa Clara County (California) formula used for temporary support and informally referenced in many other jurisdictions.</p>
+  <p>This is similar to the Santa Clara County (California) formula used for temporary support and informally referenced in many other jurisdictions. It captures the core idea behind most guideline formulas: take a share of the higher earner's income, subtract a (smaller) share of the lower earner's, and the gap narrows but does not equalize the two incomes.</p>
+
+  <h3>Worked example</h3>
+  <p>Suppose the higher earner makes $9,000/month and the lower earner makes $3,000/month. The default formula gives ($9,000 &times; 0.30) &minus; ($3,000 &times; 0.20) = $2,700 &minus; $600 = <strong>$2,100/month</strong> in estimated support. After the transfer, the higher earner is left with $6,900 and the lower earner has $5,100 &mdash; closer, but deliberately not equal. Swap in a state formula and the figure shifts: Pennsylvania's no-children formula (33% of higher net minus 40% of lower net) on the same incomes yields ($9,000 &times; 0.33) &minus; ($3,000 &times; 0.40) = $2,970 &minus; $1,200 = $1,770/month. The ~$330/month difference between two reasonable formulas on identical incomes is exactly why we show the state-specific result whenever you select a state.</p>
 
   <h2>State-specific formulas (used when state is selected)</h2>
   <ul>
@@ -21,25 +25,26 @@ const description = 'How we calculate spousal support: state-specific formulas, 
   </ul>
 
   <h2>Duration guidelines</h2>
-  <p>Most state guidelines tie duration to marriage length, often using a percentage:</p>
+  <p>Most state guidelines tie duration to marriage length, often using a percentage. Many states also treat a long marriage (commonly 20+ years) as a threshold above which support may be open-ended:</p>
   <ul>
     <li>Marriages under 5 years: 0&ndash;50% of marriage length</li>
     <li>5&ndash;10 years: ~50% of marriage length</li>
     <li>10&ndash;20 years: 60&ndash;80% of marriage length</li>
     <li>20+ years: often indefinite, subject to retirement, remarriage, or material change</li>
   </ul>
+  <p>For example, a 12-year marriage in a state using a 70% duration factor would point toward roughly 8 years of support &mdash; but this is a guideline, not a guarantee, and a judge can shorten it if the recipient is expected to become self-supporting sooner.</p>
 
   <h2>Factors that adjust the formula</h2>
-  <p>Even in formula states, judges adjust amounts up or down based on:</p>
+  <p>Even in formula states, judges adjust amounts up or down based on circumstances the formula cannot see:</p>
   <ul>
     <li>Age and health of both parties</li>
     <li>Standard of living during the marriage</li>
-    <li>Earning capacity (not just current income)</li>
-    <li>Non-monetary contributions (homemaking, supporting career)</li>
-    <li>Custody arrangements and child support</li>
-    <li>Misconduct (in some states; many have eliminated this factor)</li>
+    <li>Earning capacity (not just current income) &mdash; including imputed income where a spouse is voluntarily underemployed</li>
+    <li>Non-monetary contributions (homemaking, supporting the other's career or education)</li>
+    <li>Custody arrangements and child support, which are calculated alongside and can reduce available income</li>
+    <li>Misconduct (in some states; many have eliminated this factor entirely)</li>
   </ul>
 
   <h2>What we don't model</h2>
-  <p>Tax treatment changes (the 2017 Tax Cuts and Jobs Act changed federal tax treatment for divorces finalized after 12/31/2018); child-support interactions; property-division offsets; pre/postnup overrides. These require case-specific analysis.</p>
+  <p>Several factors that materially change a real award are out of scope because they require case-specific analysis. We do not model tax treatment (the 2017 Tax Cuts and Jobs Act made spousal support non-deductible to the payer and non-taxable to the recipient for divorces finalized after 12/31/2018, which changed negotiating dynamics); the interaction between child support and spousal support, which many states calculate together so that one reduces the other; property-division offsets, where a larger share of marital assets is traded against a lower support award; prenuptial or postnuptial agreements that override the default rules; self-employment or fluctuating income that makes "income" itself contested; and modification or termination on remarriage, cohabitation, or retirement. The estimate is informational and is not a substitute for advice from a family-law attorney in your state, who can account for your judge, your county's local rules, and the specific facts of your marriage.</p>
 </BaseLayout>

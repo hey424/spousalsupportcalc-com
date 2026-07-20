@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadCapture from '../components/LeadCapture.astro';
 const title = 'Spousal Support / Alimony Calculator | spousalsupportcalc.com';
 const description = 'Free spousal support calculator. Estimate alimony amounts based on income, marriage duration, and state-specific guidelines. Plain-English explanations of how state courts calculate support.';
 ---
@@ -22,6 +23,8 @@ const description = 'Free spousal support calculator. Estimate alimony amounts b
       </form>
     </div>
   </section>
+
+  <LeadCapture caseType="spousal_support" caseTypeLabel="Spousal Support" />
 
   <section>
     <h2>How spousal support is calculated</h2>
